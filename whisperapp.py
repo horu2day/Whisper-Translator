@@ -15,7 +15,7 @@ def prepare():
                                   force_reload=False)
     (get_speech_ts, _, _, _, _) = utils
 
-    whisper_model = whisper.load_model("tiny.en")
+    whisper_model = whisper.load_model("tiny")
 
     return model, get_speech_ts, whisper_model
 

@@ -165,8 +165,9 @@ def start_listen(whisper_model, model, get_speech_ts, mic, event, callback):
 
             if (len(time_stamps) > 0):
                 transcript = whisper_model.transcribe(audio=audio_float32)
-                translation = translate_text('ko', transcript['text'])
-                callback(transcript['text'], translation['translatedText'])
+                #translation = translate_text('ko', transcript['text'])
+                #callback(transcript['text'], translation['translatedText'])
+                callback(transcript['text'], transcript['text'])
             else:
                 pass
             print()
